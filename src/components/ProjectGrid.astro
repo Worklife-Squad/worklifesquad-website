@@ -1,0 +1,23 @@
+---
+// src/components/ProjectGrid.astro
+import ProjectCard from '@/components/ProjectCard.astro';
+import type { Project } from '@/lib/projects';
+
+interface Props {
+  projects: Project[];
+}
+
+const { projects } = Astro.props;
+---
+
+{projects.length > 0 ? (
+  <ul class="grid gap-6 sm:grid-cols-2">
+    {projects.map((project) => (
+      <li>
+        <ProjectCard project={project} />
+      </li>
+    ))}
+  </ul>
+) : (
+  <p class="text-muted-foreground">No projects yet. Check back soon.</p>
+)}

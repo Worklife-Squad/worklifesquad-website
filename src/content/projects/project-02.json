@@ -1,0 +1,26 @@
+{
+  "title": "Project Two",
+  "summary": "An online storefront built for speed, search visibility and easy updates.",
+  "description": "Project Two is a lightweight storefront for a small product catalogue. Pages are prerendered for fast loads, product data lives in structured files, and the checkout hands off to a hosted payment provider so the team has no payment system to maintain.",
+  "client": "Fernhill Goods",
+  "year": 2025,
+  "tags": ["E-commerce", "Development", "SEO"],
+  "images": [
+    {
+      "src": "../../assets/projects/project-02/01.png",
+      "alt": "Project Two, image 1"
+    },
+    {
+      "src": "../../assets/projects/project-02/02.png",
+      "alt": "Project Two, image 2"
+    },
+    {
+      "src": "../../assets/projects/project-02/03.png",
+      "alt": "Project Two, image 3"
+    },
+    {
+      "src": "../../assets/projects/project-02/04.png",
+      "alt": "Project Two, image 4"
+    }
+  ]
+}

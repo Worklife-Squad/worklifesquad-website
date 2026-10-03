@@ -1,0 +1,13 @@
+---
+// src/components/Footer.astro
+import { SITE_NAME } from '@/lib/config';
+
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-border">
+  <div class="mx-auto max-w-4xl px-4 py-6 text-sm text-muted-foreground">
+    &copy; {year} &nbsp;
+    {SITE_NAME}
+  </div>
+</footer>

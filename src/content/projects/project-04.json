@@ -1,0 +1,26 @@
+{
+  "title": "Project Four",
+  "summary": "A data dashboard that turns weekly reports into a live, readable overview.",
+  "description": "Project Four replaced a set of manual spreadsheets with a single dashboard. We modelled the data, built clear charts for the metrics the team checks every week, and added filters so each department can focus on its own numbers.",
+  "client": "Lumen Analytics",
+  "year": 2024,
+  "tags": ["Dashboard", "Data visualization", "Development"],
+  "images": [
+    {
+      "src": "../../assets/projects/project-04/01.png",
+      "alt": "Project Four, image 1"
+    },
+    {
+      "src": "../../assets/projects/project-04/02.png",
+      "alt": "Project Four, image 2"
+    },
+    {
+      "src": "../../assets/projects/project-04/03.png",
+      "alt": "Project Four, image 3"
+    },
+    {
+      "src": "../../assets/projects/project-04/04.png",
+      "alt": "Project Four, image 4"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "title": "Project Three",
+  "summary": "A mobile-first booking experience for a multi-location service company.",
+  "description": "Project Three simplifies how customers find a location and book an appointment. We designed a clear mobile flow, connected it to the client's scheduling system and added location pages that rank well in local search.",
+  "client": "Harbor Health Group",
+  "year": 2025,
+  "tags": ["UX design", "Web app", "Accessibility"],
+  "images": [
+    {
+      "src": "../../assets/projects/project-03/01.png",
+      "alt": "Project Three, image 1"
+    },
+    {
+      "src": "../../assets/projects/project-03/02.png",
+      "alt": "Project Three, image 2"
+    },
+    {
+      "src": "../../assets/projects/project-03/03.png",
+      "alt": "Project Three, image 3"
+    },
+    {
+      "src": "../../assets/projects/project-03/04.png",
+      "alt": "Project Three, image 4"
+    }
+  ]
+}

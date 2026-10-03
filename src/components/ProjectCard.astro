@@ -1,0 +1,36 @@
+---
+// src/components/ProjectCard.astro
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import {
+  Card,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+}
+
+const { project } = Astro.props;
+const { title, summary, images } = project.data;
+const [cover] = images;
+---
+
+<a
+  href={`/projects/${project.id}`}
+  class="group block h-full rounded-xl outline-none focus-visible:ring-3 focus-visible:ring-ring/50">
+  <Card class="h-full pt-0 transition-colors group-hover:bg-muted/50">
+    <Image
+      src={cover.src}
+      alt={cover.alt}
+      width={800}
+      class="aspect-video w-full object-cover"
+    />
+    <CardHeader>
+      <CardTitle class="group-hover:underline">{title}</CardTitle>
+      <CardDescription>{summary}</CardDescription>
+    </CardHeader>
+  </Card>
+</a>

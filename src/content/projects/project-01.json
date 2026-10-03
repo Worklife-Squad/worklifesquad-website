@@ -1,0 +1,26 @@
+{
+  "title": "Project One",
+  "summary": "A brand refresh and marketing site for a growing local business.",
+  "description": "Project One started as a request to modernise an aging website and turned into a full brand refresh. We reworked the visual identity, rebuilt the site on a static-first stack and set up a simple content workflow so the team can publish updates on their own.",
+  "client": "Northwind Studio",
+  "year": 2026,
+  "tags": ["Branding", "Web design", "Development"],
+  "images": [
+    {
+      "src": "../../assets/projects/project-01/01.png",
+      "alt": "Project One, image 1"
+    },
+    {
+      "src": "../../assets/projects/project-01/02.png",
+      "alt": "Project One, image 2"
+    },
+    {
+      "src": "../../assets/projects/project-01/03.png",
+      "alt": "Project One, image 3"
+    },
+    {
+      "src": "../../assets/projects/project-01/04.png",
+      "alt": "Project One, image 4"
+    }
+  ]
+}

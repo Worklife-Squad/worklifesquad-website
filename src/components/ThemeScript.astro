@@ -1,0 +1,20 @@
+---
+// src/components/ThemeScript.astro
+// Runs before first paint so the saved theme is applied without a flash.
+import { THEME_STORAGE_KEY } from '@/lib/theme';
+---
+
+<script is:inline define:vars={{ storageKey: THEME_STORAGE_KEY }}>
+  try {
+    const stored = localStorage.getItem(storageKey);
+    const prefersDark = window.matchMedia(
+      '(prefers-color-scheme: dark)',
+    ).matches;
+    document.documentElement.classList.toggle(
+      'dark',
+      stored ? stored === 'dark' : prefersDark,
+    );
+  } catch {
+    // Storage can be blocked. Fall back to the light theme.
+  }
+</script>

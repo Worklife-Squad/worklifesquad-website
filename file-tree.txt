@@ -1,0 +1,114 @@
+.
+├── public
+│   ├── fonts
+│   │   ├── google-sans-latin-var.woff2
+│   │   └── newsreader-latin-var.woff2
+│   ├── .assetsignore
+│   ├── favicon.ico
+│   └── favicon.svg
+├── scripts
+│   ├── bump-version.js
+│   ├── file-tree.js
+│   ├── generate-demo-image.sh
+│   └── PaperMono-Bold.ttf
+├── src
+│   ├── assets
+│   │   └── projects
+│   │       ├── project-01
+│   │       │   ├── 01.png
+│   │       │   ├── 02.png
+│   │       │   ├── 03.png
+│   │       │   └── 04.png
+│   │       ├── project-02
+│   │       │   ├── 01.png
+│   │       │   ├── 02.png
+│   │       │   ├── 03.png
+│   │       │   └── 04.png
+│   │       ├── project-03
+│   │       │   ├── 01.png
+│   │       │   ├── 02.png
+│   │       │   ├── 03.png
+│   │       │   └── 04.png
+│   │       └── project-04
+│   │           ├── 01.png
+│   │           ├── 02.png
+│   │           ├── 03.png
+│   │           └── 04.png
+│   ├── components
+│   │   ├── ui
+│   │   │   ├── badge.tsx
+│   │   │   ├── button.tsx
+│   │   │   ├── card.tsx
+│   │   │   ├── dialog.tsx
+│   │   │   ├── field.tsx
+│   │   │   ├── input.tsx
+│   │   │   ├── label.tsx
+│   │   │   ├── separator.tsx
+│   │   │   ├── sheet.tsx
+│   │   │   ├── sonner.tsx
+│   │   │   └── textarea.tsx
+│   │   ├── AppToaster.tsx
+│   │   ├── ContactForm.tsx
+│   │   ├── Footer.astro
+│   │   ├── FormField.tsx
+│   │   ├── GalleryLightbox.tsx
+│   │   ├── Header.astro
+│   │   ├── HoneypotField.tsx
+│   │   ├── ImageGallery.tsx
+│   │   ├── MobileNav.tsx
+│   │   ├── ProjectCard.astro
+│   │   ├── ProjectGrid.astro
+│   │   ├── ThemeScript.astro
+│   │   └── ThemeToggle.tsx
+│   ├── content
+│   │   └── projects
+│   │       ├── project-01.json
+│   │       ├── project-02.json
+│   │       ├── project-03.json
+│   │       └── project-04.json
+│   ├── hooks
+│   │   ├── use-contact-form.ts
+│   │   ├── use-gallery-navigation.ts
+│   │   └── use-theme.ts
+│   ├── layouts
+│   │   └── Layout.astro
+│   ├── lib
+│   │   ├── config.ts
+│   │   ├── contact-client.ts
+│   │   ├── email.ts
+│   │   ├── gallery.ts
+│   │   ├── nav.ts
+│   │   ├── projects.ts
+│   │   ├── theme.ts
+│   │   ├── types.ts
+│   │   ├── utils.ts
+│   │   └── validation.ts
+│   ├── pages
+│   │   ├── api
+│   │   │   └── contact.ts
+│   │   ├── projects
+│   │   │   ├── [slug].astro
+│   │   │   └── index.astro
+│   │   ├── contact.astro
+│   │   └── index.astro
+│   ├── styles
+│   │   ├── fonts.css
+│   │   └── global.css
+│   ├── content.config.ts
+│   └── env.d.ts
+├── .dev.vars
+├── .gitignore
+├── .prettierignore
+├── .prettierrc
+├── AGENTS.md
+├── astro.config.mjs
+├── CLAUDE.md
+├── components.json
+├── package.json
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
+├── README.md
+├── tsconfig.json
+├── worker-configuration.d.ts
+├── worklifesquad-website.code-workspace
+└── wrangler.jsonc

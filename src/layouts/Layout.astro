@@ -1,0 +1,66 @@
+---
+// src/layouts/Layout.astro
+import '@/styles/global.css';
+import { AppToaster } from '@/components/AppToaster';
+import Footer from '@/components/Footer.astro';
+import Header from '@/components/Header.astro';
+import ThemeScript from '@/components/ThemeScript.astro';
+import { SITE_NAME } from '@/lib/config';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const {
+  title,
+  description = 'A demo site built with Astro on Cloudflare Workers.',
+} = Astro.props;
+
+const pageTitle = title === SITE_NAME ? title : `${title} | ${SITE_NAME}`;
+
+// Needs `site` in astro.config.mjs. Skipped until that is set.
+const canonicalUrl = Astro.site
+  ? new URL(Astro.url.pathname, Astro.site)
+  : undefined;
+
+// Both fonts appear above the fold. Keep in sync with src/styles/fonts.css.
+const FONT_PRELOADS = [
+  '/fonts/google-sans-latin-var.woff2',
+  '/fonts/newsreader-latin-var.woff2',
+];
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth motion-reduce:scroll-auto">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {FONT_PRELOADS.map((href) => (
+      <link
+        rel="preload"
+        href={href}
+        as="font"
+        type="font/woff2"
+        crossorigin="anonymous"
+      />
+    ))}
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <ThemeScript />
+  </head>
+  <body class="flex min-h-screen flex-col bg-background text-foreground antialiased">
+    <Header />
+    <main class="mx-auto w-full max-w-4xl flex-1 px-4 py-12">
+      <slot />
+    </main>
+    <Footer />
+    <AppToaster client:idle />
+  </body>
+</html>

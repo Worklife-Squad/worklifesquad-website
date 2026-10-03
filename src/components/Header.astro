@@ -1,0 +1,40 @@
+---
+// src/components/Header.astro
+import { MobileNav } from '@/components/MobileNav';
+import { ThemeToggle } from '@/components/ThemeToggle';
+import { NAV_LINKS, SITE_NAME } from '@/lib/config';
+import { isActivePath } from '@/lib/nav';
+
+const { pathname } = Astro.url;
+---
+
+<header class="border-b border-border">
+  <div class="mx-auto flex max-w-4xl items-center justify-between px-4 py-3">
+    <a href="/" class="font-semibold">
+      {SITE_NAME}
+    </a>
+    <div class="flex items-center gap-2">
+      <nav aria-label="Main" class="hidden sm:block">
+        <ul class="flex gap-5 text-sm">
+          {NAV_LINKS.map(({ href, label }) => (
+            <li>
+              <a
+                href={href}
+                aria-current={isActivePath(pathname, href) ? 'page' : undefined}
+                class:list={[
+                  'hover:text-foreground',
+                  isActivePath(pathname, href)
+                    ? 'font-medium text-foreground'
+                    : 'text-muted-foreground',
+                ]}>
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+      <ThemeToggle client:load />
+      <MobileNav client:load links={NAV_LINKS} currentPath={pathname} />
+    </div>
+  </div>
+</header>

@@ -1,0 +1,42 @@
+---
+// src/pages/index.astro
+import ProjectGrid from '@/components/ProjectGrid.astro';
+import { buttonVariants } from '@/components/ui/button';
+import Layout from '@/layouts/Layout.astro';
+import { HOME_PROJECT_LIMIT, SITE_NAME } from '@/lib/config';
+import { getSortedProjects } from '@/lib/projects';
+
+const projects = (await getSortedProjects()).slice(0, HOME_PROJECT_LIMIT);
+---
+
+<Layout
+  title={SITE_NAME}
+  description="A small demo site built with Astro, Tailwind CSS and Cloudflare Workers.">
+  <section class="flex flex-col items-start gap-4 pb-16">
+    <h1 class="text-5xl md:text-6xl lg:text-7xl font-medium tracking-tight text-balance">
+      Building Memorable Moments at Work
+    </h1>
+    <p class="max-w-xl text-lg text-muted-foreground">
+      We help organizations create engaging and meaningful workplace experiences
+      that bring people together, strengthen employer brands, and make work
+      unforgettable.
+    </p>
+    <a href="/contact" class={buttonVariants({ size: 'lg' })}>
+      Get in touch
+    </a>
+  </section>
+
+  <section aria-labelledby="projects-heading" class="flex flex-col gap-6">
+    <div class="flex items-baseline justify-between">
+      <h2 id="projects-heading" class="text-2xl font-medium">
+        Projects
+      </h2>
+      <a
+        href="/projects"
+        class="text-sm text-muted-foreground hover:text-foreground">
+        View all projects
+      </a>
+    </div>
+    <ProjectGrid projects={projects} />
+  </section>
+</Layout>

@@ -1,0 +1,56 @@
+{
+  "name": "worklifesquad-website",
+  "type": "module",
+  "version": "0.0.0",
+  "engines": {
+    "node": "24.x"
+  },
+  "scripts": {
+    "postinstall": "wrangler types",
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro build && astro preview",
+    "astro": "astro",
+    "deploy": "astro build && wrangler deploy",
+    "cf-typegen": "wrangler types",
+    "format": "prettier --write \"./**/*.{html,js,jsx,json,css,ts,tsx,astro,md,jsonc,mjs}\"",
+    "bump": "node scripts/bump-version.js && pnpm install && pnpm format && pnpm tree",
+    "tree": "node scripts/file-tree.js",
+    "typecheck": "tsc --noEmit",
+    "demo-image": "cd scripts && ./generate-demo-image.sh"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^14.3.3",
+    "@astrojs/react": "^7.0.0",
+    "@base-ui/react": "^1.8.0",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "astro": "^7.3.5",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "cn": "^0.4.0",
+    "lucide-react": "^1.49.0",
+    "next-themes": "^0.4.6",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "shadcn": "^4.21.0",
+    "sonner": "^2.0.8",
+    "tailwind-merge": "^3.7.0",
+    "tailwindcss": "^4.3.3",
+    "tw-animate-css": "^1.4.0"
+  },
+  "allowScripts": {
+    "esbuild": true
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "chalk": "^6.0.1",
+    "ora": "^9.4.1",
+    "prettier": "3.9.9",
+    "prettier-plugin-astro": "1.1.0",
+    "semver": "^7.8.5",
+    "wrangler": "^4.145.0"
+  },
+  "packageManager": "pnpm@12.8.1+sha512.f64ba907507f5ceafe06c8d38e6052d0179444580ec1279ddd5bfc11cb48aa8a2644b66598e07e761da84872a9fc57d5f902b87fa49d024198d558612aabbe45"
+}
