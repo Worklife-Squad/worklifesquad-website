@@ -4,7 +4,6 @@
 │   │   ├── google-sans-latin-var.woff2
 │   │   └── newsreader-latin-var.woff2
 │   ├── .assetsignore
-│   ├── favicon.ico
 │   └── favicon.svg
 ├── scripts
 │   ├── bump-version.js
@@ -104,6 +103,7 @@
 ├── astro.config.mjs
 ├── CLAUDE.md
 ├── components.json
+├── file-tree.txt
 ├── package.json
 ├── pnpm-lock.yaml
 ├── pnpm-workspace.yaml

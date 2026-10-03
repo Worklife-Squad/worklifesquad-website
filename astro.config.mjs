@@ -1,11 +1,9 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-
 import cloudflare from '@astrojs/cloudflare';
-
 import tailwindcss from '@tailwindcss/vite';
-
 import react from '@astrojs/react';
+import favicons from 'astro-favicons';
 
 // https://astro.build/config
 export default defineConfig({
@@ -24,5 +22,11 @@ export default defineConfig({
     enabled: false,
   },
 
-  integrations: [react()],
+  integrations: [
+    react(),
+    favicons({
+      name: 'Worklife Squad',
+      short_name: 'WLS',
+    }),
+  ],
 });

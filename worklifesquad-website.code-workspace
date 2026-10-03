@@ -1,13 +1,10 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {
-		"cSpell.words": [
-			"Worklife",
-			"worklifesquad"
-		]
-	}
+  "folders": [
+    {
+      "path": ".",
+    },
+  ],
+  "settings": {
+    "cSpell.words": ["favicons", "Worklife", "worklifesquad"],
+  },
 }
